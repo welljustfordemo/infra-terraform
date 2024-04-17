@@ -1,2 +1,4 @@
 values-*.tfvars
 .idea
+backend.tf
+.terraform/
