@@ -75,6 +75,13 @@ resource "azurerm_kubernetes_cluster" "aks-aci-virtual-node" {
     subnet_name = azurerm_subnet.aci-nodepool-subnet.name
   }
 
+  linux_profile {
+    admin_username = "pengfei"
+    ssh_key {
+      key_data = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC1D3zqSEJxdQkO59hcoJNzHmxuaQ0af1oauHjBKBjMeheveKgIXztwqG/TiBb7LOkHBi0cKipnmbdYpxQ2szehrLNGtGCP8OMN346F5sRd25twK0YPRGClCxM1UtmREn5LdknlVd1wwulfX21JX4+6MfhOMe8UJdHNsSchUpFgJvdBwCMHAW1tTkWAdgvss1SRfP9ce1fnIQjXZqrrU1IRUgNQmN1VPimNwjtqgNLCITF+a21XvZjLTlv9n8q8vS0tpNEta5D/UHNmelO9oiIGr2LYbHeH/JmjoPDScpfw7jhvrE9HYFCyNBmUhQK8b+z4QkPYK8do0BmrZrUANps0xT2a5RvspOr+8n5c3hxzAerO9wzfNH2EDj5m/ieLoO/UXFQkZFcw1jwh1oQsmsVJW6ycbTcfedQx4IaA4WTA0LoUOKdeRpX75gyqCzm4Z+mBDSaiEAwXFygnabHCt+bh5SEo+EoEcUX9BPncwEM2JA95/Svdl7O1lZGsqqPlz68= andrew@AndrewsacStudio"
+    }
+  }
+
   tags = {
     Environment = "Lab"
     CanDelete   = "Yes"
